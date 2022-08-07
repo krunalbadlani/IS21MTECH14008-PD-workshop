@@ -19,7 +19,7 @@ The day starts off with few sessions on:-
 
 ### SoC design and openLANE
 ---
--- The 3 important factors in ASIC design process are, 
+The 3 important factors in ASIC design process are, 
 1. RTL designs 
 2. EDA tools 
 3. Process design Kits (PDKs) 
@@ -251,13 +251,13 @@ Here we find all parameters which we can tweak :
 
 ### Spice model of the cmos inverter and its characterization using ngspice:
 ---
-1. Git cloning the required files from [Nickson Jose's github]()
+1. Git cloning the required files from [Nickson Jose's github](https://github.com/nickson-jose/vsdstdcelldesign)
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/gitcloning%20vsdstdcelllib%20from%20nickson.png)
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/vsdstdcell%20showing%20up.png)
 
-2. Copying the sky130a.tech file to the folder to enable magic to view the inverter's layout
+2. Copying the sky130a.tech file to the folder to enable magic to view the inverter's layout:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/copying%20sky130atech%20file%20to%20vsdstdcell.png)
 
@@ -291,13 +291,14 @@ We can check any DRC errors like this:
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/extraction%20of%20spice%20file%20in%20vsdstdcell%20lib2.png)
 
 5. The spice deck looks like this: (less sky130_inv.spice)
-and the dimensions of the one inv are in the tkcon window
+and the dimensions of the one inv are in the tkcon window:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/spice%20file%20details.png)
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/size%20x%20size%20in%20tkcon%20.png)
 
-6. We modify the spice file as per our design to see its response in ngspice
+6. We modify the spice file as per our design to see its response in ngspice:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/modified%20spice%20file.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/running%20ngspice.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/op%20in%20ngspice.png)
@@ -305,10 +306,12 @@ and the dimensions of the one inv are in the tkcon window
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop1.png)
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop2.png)
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop2660.png)
+
 Diff of these values gives rise time (0.06281ns):
 
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/rise%20time.png)
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop3.png)
+
 DIff of these two values gives propagation delay(0.06096ns):
 
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/propdelay.png)
@@ -333,16 +336,20 @@ DIff of these two values gives propagation delay(0.06096ns):
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/our%20saved%20cell%20in%20vsdstdcell.png)
 
 3. We now write the lef file of our inverter and send it to our folder and see whats inside it and also sending it to src of the picorv32a folder to later merge it to the lef of the design:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/writing%20lef%20for%20vsdinv.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/seeing%20the%20new%20lef%20in%20vsd%20std%20cell.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/inside%20lef%20file%20of%20vsdinv.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/copyinglef%20to%20src%20of%20picorv32a.png)
 
-4. We transfer the lib files of the inverter to the src of the design.
+4. We transfer the lib files of the inverter to the src of the design:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/copying%20these%20libs%20to%20src.png)
 
-5. We find some errors in preparing the design after adding the inverter.
+5. We find some errors in preparing the design after adding the inverter:
+
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/errors%20in%20preping%20design%20after%20including%20std%20cell.png)
+
 So we change the config file like this: 
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/changes%20to%20the%20config_tcl%20file%20to%20include%20our%20vsdiat.png)
@@ -357,19 +364,22 @@ we then run these commands:
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/we%20can%20see%20our%20design%20yay.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/successfull%20synthesis%20with%20tns%20and%20wns.png)
 
-We now tinker the switches to bring that wns and tns down to 0 , ( keep in mind to prep the design overwriting the previous run using prep -design name -tag date_runs -overwrite to let your synthesize everytime and not skip it)
+We now tinker the switches to bring that wns and tns down to 0 , ( keep in mind to prep the design overwriting the previous run using prep -design name -tag date_runs -overwrite to let your synthesize everytime and not skip it):
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/tinkering%20synth%20switches.png)
 
-We choose the following strategy and see the subsquent results
+We choose the following strategy and see the subsquent results:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/delay%203%20buffer%204.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/delay%203%20area%20and%20vsdinv.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/delay%203%20wns%20and%20tns.png)
 
 We can see the merged.lef with our inverter !
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/meged%20lef%20with%20vsd.png)
 
-We will now follow the flow of subsequent steps but theres a tweak, to avoid the following error we use the flow mentioned below it
+We will now follow the flow of subsequent steps but theres a tweak, to avoid the following error we use the flow mentioned below it:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/error%20in%20floorplan%20.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/new%20flow.png)
 
@@ -397,29 +407,45 @@ Placement result in magic:
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/read%20def%20in%20or.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/read%20write%20db%20in%20or.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/reading%20insts%20or%20and%20error.png)
+
 solving error by adding my_base.sdc:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/my_base_sdc.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/solved%20and%20subsequent%20steps.png)
-setu delay:
+
+setup delay:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/setup%20delay.png)
+
 hold delay:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/hold%20delay.png)
-This delay is not right because of limitations of TrionCTS
+
+This delay is not right because of limitations of TrionCTS:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/to%20get%20real%20analysis.png)
+
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/slack%20met%20yay.png)
 
 The TrionCTS 2.0 used in this workshop gives the slack analysis and the skew analysis:
 
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/setup_slack.png)
+
+
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/hold_slack.png)
+
+
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/skew%20report%20post%20cts.png)
 
-### DAY 5
+## DAY 5
 ---
-## The PDN:
+### The PDN:
 ---
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/gen_pdn.png)
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/pdn%20report.png)
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/pdn%20finished.png)
 
 ## Finally we do Routing:
@@ -427,11 +453,12 @@ The TrionCTS 2.0 used in this workshop gives the slack analysis and the skew ana
 1. the defaults:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/routing%20defaults.png)
+
 2. One error we get while tweaking the defaults:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/routing%20error.png)
 
-3. We run routing now and see the following results
+3. We run routing now and see the following results:
 
  ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/routing%20finished.png)
 
@@ -440,6 +467,7 @@ The TrionCTS 2.0 used in this workshop gives the slack analysis and the skew ana
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/routing%20report.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/preroute_file.png)
 4. opening the final result in magic:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/post%20route%20magic%20.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/post%20route%20magic%20vsdinv.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images5/post%20route%20magic%20vsdinv%20expanded.png)
