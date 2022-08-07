@@ -3,6 +3,32 @@ This repository contains the whole summary of khowledge acquired and hands on do
 
 ## *Contents*
 
+  * [DAY 0](#day-0)
+  * [Day 1](#day-1)
+    + [Talking to Computers](#talking-to-computers)
+    + [SoC design and openLANE](#soc-design-and-openlane)
+    + [ASIC flow](#asic-flow)
+    + [Getting familiar to EDA tools](#getting-familiar-to-eda-tools)
+    + [Synthesis for the first time !!](#synthesis-for-the-first-time---)
+* [Day 2](#day-2)
+    + [Beginning with floorplan](#beginning-with-floorplan)
+    * [Lets do the Placement now](#lets-do-the-placement-now)
+* [Day 3](#day-3)
+    + [Changing parameters of the flow on the fly from the openLANE flow](#changing-parameters-of-the-flow-on-the-fly-from-the-openlane-flow)
+    + [Spice model of the cmos inverter and its characterization using ngspice:](#spice-model-of-the-cmos-inverter-and-its-characterization-using-ngspice-)
+ + [Day 4](#day-4)
+   * [Merging our inverter with the design](#merging-our-inverter-with-the-design)
+   * [Running CTS](#running-cts)
+   * [We Do STA here:](#we-do-sta-here-)
+  * [DAY 5](#day-5)
+    + [The PDN:](#the-pdn-)
+     * [Finally we do Routing:](#finally-we-do-routing-)
+     * [Thanking VSD And team for such a great workshop](#thanking-vsd-and-team-for-such-a-great-workshop)
+  * [Acknowledgement](#acknowledgement)
+
+
+
+
 ## DAY 0
 We are introduced to the platform and the flow of the workhop was explained. The Platform ( lab_instance 1 ) is a remote Linux based system hosted on a server on the cloud.
 
