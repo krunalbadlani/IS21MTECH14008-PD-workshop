@@ -153,3 +153,55 @@ We can calculate a very important factor called as dflipfloppercentage like this
 ---
 
 ### Beginning with floorplan
+---
+
+1. We can go to 
+```
+        cd openlane
+        cd configuration
+        less floorplan.tcl
+```
+and see the defaults set for floorplanning:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/floorplan%20defaults.png)
+
+2. We can now go to the openlane flow and do floorplan:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/run_floorplan.png)
+
+3. We can see the results in various logs in runs/<date_>/tmp/logs and runs/<date_>/config.tcl :
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/4-ioplacer.log.png)
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/configafterFP.png)
+
+4. Floorplanning creats a DEF file or the Data exchange format file (DEF file is used to represent the Physical layout of an Integrated Circuit (IC) in ASCII format. A DEF file is strongly connected with the Library Exchange Format (LEF) file. So both files are needed for a correct display of physical design. DEF file format was developed by Cadence Design System)
+Our def file looks like:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/picorv32a_def%20file.png)
+
+
+5. We can view the output of the floorplan in magic with the following command:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/magic%20to%20read%20stage%20after%20floorplan.png)
+
+6. The outputs are as follows:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/picrorv32a%20in%20magic.png)
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/io%20exploration.png)
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/io%20exploration%20hori.png)
+
+macros are at bottom left:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/marcros%20at%20bottom%20left.png)
+
+7. We can change toggle switches or parameters in the various layout.tcl files in the design folder and see changes in the magic layout like I changed the Metal layers in the following way and saw the changes(but not all changes will get implemented as there is a priority orded in the .tcl files and the default values if some value is set in the most prior file we will only see that in the ouput ) :
+
+changing the config.tcl in picorv32a folder like:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/editing_config_tcl.png)
+
+results:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/metal%20hori%20after%20rectifying.png)
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images2/metal%20verti%20after%20rectifying.png)
+
