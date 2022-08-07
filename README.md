@@ -301,10 +301,27 @@ and the dimensions of the one inv are in the tkcon window:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/modified%20spice%20file.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/running%20ngspice.png)
+
+
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/op%20in%20ngspice.png)
-![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/modify%20cap%20to%20get%20good%20op.png)
+
+plotting y vs time vs a: 
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop1.png)
+
+
+We modify the cap values in spice deck to get better waveforms:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/modify%20cap%20to%20get%20good%20op.png)
+
+We obtain the following results
+
+
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop2.png)
+
+Rise time at 0.660 v (20%) and 2.64 v(80%)
+
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop2660.png)
 
 Diff of these values gives rise time (0.06281ns):
