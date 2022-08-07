@@ -126,12 +126,30 @@ Every step done by me in this workshop is explained below:-
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthesis%20file%20in%20results.png)
 
-the verilog file on opening using less <name>:
+the verilog file on opening using less <name_of_file>:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthsis_vfile.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthsis_vfileend.png)
 
-10. When we see the reports generated during the run_synthesis in runs/<date>/reports we can see the following:
+10. When we see the reports generated during the run_synthesis in runs/<date_of_run>/reports we can see the following:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/reports.png)
+
+we can open a report from the folder:
+
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/timing%20report%20after%20synth.png)
+
+11. We can read the promts generated on the run_synthesis and find:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/chiparea.png)
+
+We can calculate a very important factor called as dflipfloppercentage like this:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/dffpercentage.png)
+
+## Day 2
+
+---
+
+### Beginning with floorplan
