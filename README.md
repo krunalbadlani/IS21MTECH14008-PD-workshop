@@ -50,3 +50,52 @@ The openLANE flow differs slightly from the conventional ASIC flow, it can be se
 - openLANE works in either autonomous or interactive mode, we will use the interactive one here to tweak something or other on each and every stage of the flow. 
 
 More data on openLANE can be found on its original github page [openLANE](https://github.com/efabless/openlane).
+
+Every step done by me in this workshop is explained below:- 
+
+### Getting familiar to EDA tools
+
+--- 
+
+- Getting started with openLANE:
+1. open terminal
+2. redirect to the work directory, then go to tools
+3. do a ls and find 2 folders : openlane_working_dir and pdks
+4. ``` 
+   cd openlane_working_dir
+   ls -ltr
+   cd openlane
+   docker
+   ./flow.tcl -interactive
+   ```
+5. Following will be seen, also follow the commands seen below the openload logo to get the required openlane package and prepare the design picorv32a:
+
+![openLOAD screen](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/Screenshot%202022-08-06%20162200.png)
+       
+6. The mentioned design can be accessed in the following way from the openlane folder (do this in a new tab of the terminal):
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/accessing%20the%20design%20picorv32a.png)
+
+7. The contents of the design folder will be as follows: 
+
+![k](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/contents%20of%20design%20picorv.png)
+
+8. The input to the openLANE flow is present in the SRC folder as follows:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/src%20before%20flow.png)
+
+9. The config.tcl file looks like this at beginning and we will make changes to it subsequently as we move ahead:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/config.tcl%20initially.png)
+
+### Synthesis for the first time !!
+
+---
+
+1. We are all set and now we get back to our openLANE flow tab and start with synthesis like this:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/run_synthesis.png)
+
+2. Once it completes we will find a prompt like this:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthesis_successful.png)
