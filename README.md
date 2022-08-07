@@ -99,3 +99,39 @@ Every step done by me in this workshop is explained below:-
 2. Once it completes we will find a prompt like this:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthesis_successful.png)
+
+3. The prep -design <design_name> command earlier will create a runs folder in the design/picorv32a folder which we accessed steps before, we can verify it by doing a ls in that folder.
+
+4. When we view the contents of the runs folder we will be able to see folders with the name of the date on which that particular design was prepared. It will look like this:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/runs%20after%20first%20attempt.png)
+
+5. Each of this folder has the following things:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/isnide%20date%20folder%20in%20runs.png)
+
+6. The tmp folder has the following info:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/tmp%20folder.png)
+
+7. The merged.lef file is important here as a lef file or a library exhcange format file is the Library Exchange Format (LEF) is a specification for representing the physical layout of an integrated circuit in an ASCII format. It includes design rules and abstract information about the cells. It looks something like this : 
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/meged_lef%20file.png)
+
+8. The lef file has information on pins and ports of the design like this: 
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/merged_lef2.png)
+
+9. In the runs/<date_of_run> folder we can see the results which contains the folder synthesis, opening it we'll see the files modified by the syntheis process.
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthesis%20file%20in%20results.png)
+
+the verilog file on opening using less <name>:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthsis_vfile.png)
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/synthsis_vfileend.png)
+
+10. When we see the reports generated during the run_synthesis in runs/<date>/reports we can see the following:
+
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/reports.png)
+![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images1/timing%20report%20after%20synth.png)
