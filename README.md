@@ -9,7 +9,7 @@ This repository contains the whole summary of khowledge acquired and hands on do
     + [SoC design and openLANE](#soc-design-and-openlane)
     + [ASIC flow](#asic-flow)
     + [Getting familiar to EDA tools](#getting-familiar-to-eda-tools)
-    + [Synthesis for the first time !!](#synthesis-for-the-first-time---)
+    + [Synthesis for the first time !!](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/README.md#synthesis-for-the-first-time-)
 * [Day 2](#day-2)
     + [Beginning with floorplan](#beginning-with-floorplan)
     * [Lets do the Placement now](#lets-do-the-placement-now)
