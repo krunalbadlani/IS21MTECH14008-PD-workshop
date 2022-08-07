@@ -327,6 +327,9 @@ Rise time at 0.660 v (20%) and 2.64 v(80%)
 Diff of these values gives rise time (0.06281ns):
 
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/rise%20time.png)
+
+Values at 1.65 V (50% to calculate propagation delay)
+
 ![o](  https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images3/ngop3.png)
 
 DIff of these two values gives propagation delay(0.06096ns):
@@ -340,6 +343,7 @@ DIff of these two values gives propagation delay(0.06096ns):
 1. We should look at the tracks.info (dependent on the PDK) file to set the grid size of our inverters layout so that we can get perfect merger of our inverters with the standard cells present in the design already:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/tracksinfo.png)
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/tracks%20info%20less.png)
 
 2. We have to set the grid size of our inv with respect to the design tracks.info , we use g to make the grid visible and the subsequent steps to change it etehn we save it to our folder:
@@ -400,7 +404,9 @@ We will now follow the flow of subsequent steps but theres a tweak, to avoid the
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/error%20in%20floorplan%20.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/new%20flow.png)
 
-Following new flow we get this:
+Following new flow mentioned above we go on like this:
+
+
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/init_floorplan.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/place_io.png)
@@ -417,8 +423,19 @@ Placement result in magic:
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/placement_result%20in%20magic.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/finding%20our%20cell%20and%20using%20command%20to%20highlight%20ports.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/ourcell_placed.png)
+
+## Running CTS 
+---
+We run cts here and take a look at the results:
+
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/run_cts.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/trion_cts.png)
+
+#### We Do STA here:
+---
+We start openROAD to give a platform to the openSTA:
+
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/running%20openroad%20to%20implement%20opensta.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/reading%20lef%20in%20openroad.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/read%20def%20in%20or.png)
@@ -429,6 +446,8 @@ solving error by adding my_base.sdc:
 
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/my_base_sdc.png)
 ![o](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/solved%20and%20subsequent%20steps.png)
+
+Hence we get the delays:
 
 setup delay:
 
@@ -447,12 +466,14 @@ This delay is not right because of limitations of TrionCTS:
 
 The TrionCTS 2.0 used in this workshop gives the slack analysis and the skew analysis:
 
+Setup_slack:
+
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/setup_slack.png)
 
-
+Hold_slack:
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/hold_slack.png)
 
-
+Skew_analysis:
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/skew%20report%20post%20cts.png)
 
 ## DAY 5
@@ -497,8 +518,9 @@ The TrionCTS 2.0 used in this workshop gives the slack analysis and the skew ana
 
 
 ## Thanking VSD And team for such a great workshop
+---
 
 ## Acknowledgement
-
+---
 - Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 - Nickson Jose, VLSI Engineer
