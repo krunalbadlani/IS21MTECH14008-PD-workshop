@@ -20,9 +20,9 @@ This repository contains the whole summary of khowledge acquired and hands on do
    * [Merging our inverter with the design](#merging-our-inverter-with-the-design)
    * [Running CTS](#running-cts)
    * [We Do STA here:](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/README.md#we-do-sta-here)
-  * [DAY 5](#day-5)
-    + [The PDN:](#the-pdn-)
-     * [Finally we do Routing:](#finally-we-do-routing-)
+  * [DAY 5](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/README.md#day-5)
+    + [The PDN:](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/README.md#the-pdn)
+     * [Finally we do Routing:](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/README.md#finally-we-do-routing-)
      * [Thanking VSD And team for such a great workshop](#thanking-vsd-and-team-for-such-a-great-workshop)
   * [Acknowledgement](#acknowledgement)
 
