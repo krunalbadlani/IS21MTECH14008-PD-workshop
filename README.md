@@ -15,7 +15,7 @@ This repository contains the whole summary of khowledge acquired and hands on do
     * [Lets do the Placement now](#lets-do-the-placement-now)
 * [Day 3](#day-3)
     + [Changing parameters of the flow on the fly from the openLANE flow](#changing-parameters-of-the-flow-on-the-fly-from-the-openlane-flow)
-    + [Spice model of the cmos inverter and its characterization using ngspice:](#spice-model-of-the-cmos-inverter-and-its-characterization-using-ngspice-)
+    + [Spice model of the cmos inverter and its characterization using ngspice:](https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/README.md#spice-model-of-the-cmos-inverter-and-its-characterization-using-ngspice)
  + [Day 4](#day-4)
    * [Merging our inverter with the design](#merging-our-inverter-with-the-design)
    * [Running CTS](#running-cts)
