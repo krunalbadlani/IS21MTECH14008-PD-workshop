@@ -500,6 +500,7 @@ Hold_slack:
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/hold_slack.png)
 
 Skew_analysis:
+
 ![o]( https://github.com/krunalbadlani/IS21MTECH14008-PD-workshop/blob/main/images4/skew%20report%20post%20cts.png)
 
 ## DAY 5
