@@ -549,5 +549,5 @@ Skew_analysis:
 
 ## Acknowledgement
 ---
-- Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
-- Nickson Jose, VLSI Engineer
+- [Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)
+- [Nickson Jose, VLSI Engineer](https://www.linkedin.com/in/nickson-jose/)
